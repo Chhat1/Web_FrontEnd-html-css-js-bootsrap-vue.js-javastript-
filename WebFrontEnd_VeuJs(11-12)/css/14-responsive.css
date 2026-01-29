@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-responsive{
+    width: 100%;
+    padding: 50px;
+    background-color: rgb(157, 128, 128);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+/* Default = Mobile */
+
+@media (max-width: 576px) {
+  /* Large mobile */
+  .bg-responsive{
+    background-color: red;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tablet */
+  .bg-responsive{
+    background-color: pink;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Laptop */
+  .bg-responsive{
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Desktop */
+  .bg-responsive{
+    background-color: black;
+  }
+}

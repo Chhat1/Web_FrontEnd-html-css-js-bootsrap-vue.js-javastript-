@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar > .logo > img{
+    width: 50px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.navbar > .menu > .menu-links{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+.navbar > .menu > .menu-links > li > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: sans-serif;
+    transition: all 0.1s ease-in-out;
+}
+.navbar > .menu > .menu-links >li > a:hover{
+    color: rgb(0, 89, 255);
+}
+
+.navbar > .login > button{
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transition: all  0.3s  ease-in-out;
+    cursor: pointer;
+    animation: setColor 3s infinite alternate linear ;
+
+    /* infinite សម្រាប់ឲ្យរត់រហូត */
+    /* alternate ធ្វើឲ្យរត់ smooth */
+    /* linear ធ្វើឲ្យរត់ដោយល្បឿនស្មើគ្នា */
+    /*
+    ease លឿនដើម យឺតចុង (default)
+    ease-in យឺតដើម លឿនចុង
+    ease-out លឿនដើម យឺតចុង
+    ease-in-out រត់យឺត​ -> លឿន -> យឺត
+    */
+
+}
+@keyframes setColor{
+    0%{
+        transform: translateX(0);
+        background-color: rgb(0, 240, 228);
+        color: white;
+    }
+    50%{
+        transform: translateX(20px);
+        background-color: blue;
+        color: white;
+    }
+    75%{
+        background-color: red
+        ;
+        color: white;
+    }
+    100%{
+        transform: translateX(0);
+        background-color: rgb(255, 0, 247);
+        color: aliceblue;
+    }
+}
+.navbar > .login > button:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+.navbar > .menu > .menu-links > .menu-drop-down{
+    position: relative;
+}
+.navbar > .menu > .menu-links > .menu-drop-down > .drop-down > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}

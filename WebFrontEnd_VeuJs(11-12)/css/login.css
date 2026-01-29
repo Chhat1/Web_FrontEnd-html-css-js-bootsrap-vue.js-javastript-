@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(42, 42, 255);
+}
+.main-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 50px;
+}
+.login{
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+.main-login > .login > h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+.main-login > .login > .login-form{
+    margin-top: 25px;
+    position: relative;
+}
+.main-login > .login > .login-form > span > i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 55%;
+}
+.main-login > .login > .login-form > input{
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+
+    outline: none;
+    border: 1.5px solid rgb(215, 214, 214);
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+.main-login > .login > .login-form > a{
+    text-decoration: none;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(22, 131, 255);
+}
+.main-login > .login > .btn-login > p > span > a{
+    text-decoration: none;
+    color: rgb(22, 131, 255);
+}
+.main-login > .login > .btn-login
+{
+    margin-top: 10px;
+}
+.main-login > .login > .btn-login > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(22, 131, 255);
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.main-login > .login > .btn-login > p{
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+.main-login > .login > .media-login{
+    margin-top: 10px;
+}
+.main-login > .login > .media-login > button{
+    width: 100%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 17px;
+    border: none;
+    padding: 15px;
+}
+.main-login > .login > .media-login > .google{
+    border: 1px solid rgb(202, 202, 202);
+    color: gray;
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+.main-login > .login > .media-login > .facebook {
+    color: white;
+    background-color: rgb(2, 103, 255);
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+}
+.main-login > .login > .media-login > .facebook > .ri-facebook-line{
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+    top: 25%;
+    padding: 2px;
+    border-radius: 50%;
+    color: rgb(2, 103, 255);
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-login > .login > .media-login .google > .ri-google-fill{
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+}
+
+
+.main-login > .login > .main-line{
+    display: flex;
+    align-items: center;
+    color: #928f8f;
+    margin: 25px;
+}
+
+.main-login > .login > .main-line > .line{
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.main-login > .login > .main-line > .text{
+    margin: 0 8px;
+}

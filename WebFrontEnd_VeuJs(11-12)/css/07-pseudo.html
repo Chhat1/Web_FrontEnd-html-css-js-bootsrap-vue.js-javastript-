@@ -24,8 +24,9 @@
             background-color: red;
         }
         input{
-            background-color: red;
+            background-color: rgb(12, 69, 160);
             transition: all .5s ease-in-out;
+            padding: 15px;
         }
         input:focus{
             background-color: red;
@@ -34,6 +35,9 @@
             font-size: 20px;
             color: white;
             transition: all .5s ease-in-out;
+        }
+        input::placeholder{ 
+            color: white;
         }
         button{
             transition: all .5s ease-in-out;
@@ -64,6 +68,45 @@
         }
         ul > li:nth-child(3){
             background-color: green;
+            
+        }
+        .insert-element{
+            margin-top: 50px;
+            margin-left: 10px;
+            padding: 15px;
+            border-radius: 30px;
+            font-family: sans-serif;
+        }
+
+        .insert-element::before{
+            content: "Inserted";
+            background-color: red;
+            font-family: sans-serif;
+            border-radius: 30px;
+            padding: 15px;
+        }
+        .insert-element::after{
+            content: "After insert";
+            background-color: red;
+            font-family: sans-serif;
+            border-radius: 30px;
+            padding: 15px;
+        }
+
+        p::first-line{
+            color: rgb(194, 9, 135);
+            font-family: sans-serif;
+            text-decoration: underline
+        }
+        p::first-letter{
+            background-color: green;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 100px;
+        }
+        .paragraph::selection{
+            color: rgb(0, 0, 0);
+            background-color: pink;
         }
     </style>
 </head>
@@ -87,6 +130,14 @@
         <li>item4</li>
     </ul>
 
+    <!-- ::Before -->
+    <h1 class="insert-element">::Before</h1>
+
+
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit sint vero tempora. Eum incidunt iste a at. Dignissimos consequatur voluptate minima, praesentium tempore asperiores ducimus sint aspernatur delectus labore!
+    </p>
+
+    
 
 </body>
 </html>

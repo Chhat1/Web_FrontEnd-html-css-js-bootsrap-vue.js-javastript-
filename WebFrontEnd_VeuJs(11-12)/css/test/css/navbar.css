@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-navbar{
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+   align-items: center;
+}
+.container-navbar > .logo > img{
+    width: 200px;
+}
+.container-navbar > .nav-menu > .menu-links{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.container-navbar > .nav-menu > .menu-links > li > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+
+}
+.container-navbar > .nav-menu > .menu-links > li a{
+    padding: 10px;
+    transition:all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.container-navbar > .nav-menu > .menu-links > li a:hover{
+    background-color: rgb(4, 105, 247);
+    color: white;
+}
+.container-navbar > .nav-menu > .menu-links > li >  button{
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(4, 105, 247);
+    transition: all .3s ease-in-out;
+}
+.container-navbar > .nav-menu > .menu-links > li > button:hover{
+    background-color: rgb(1, 82, 195);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        span{
+            display: block;
+            background-color: red;
+        }
+        h2{
+            display: inline; 
+            background-color: blue;
+        }
+        .box{
+            margin: 20px;
+            /*display: inline-block;*/
+            display: none;
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+            padding: 60px;
+        }
+        p{
+            font-family: khmer;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .container{
+            width: 80%;
+            height: 50vh;
+            margin: auto;
+            background-color: brown;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            gap: 5px;
+            /*flex-direction: column;*/
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .container > .container-card{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 30px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <span>Lorem ipsum dolor sit amet.</span>
+    <b>Hello</b>
+    <i>Display: block</i>
+    <a href="">hello</a>
+    <a href="">world</a> -->
+    <p>Display: block; កំណត់ឲ្យធាតុដែលយក width តាម ធាតុ ឲ្យទៅជា width: 100%</p>
+    <p>Display: inline; កំណត់ធាតុដែលមាន width 100% ឲ្យទៅជាធាតុយក width តាម ធាតុ តែមិនអាចកំណត់​ width បានទេ </p>
+    <p>Display: inline-block; កំណត់ធាតុដែលមាន width 100% ឲ្យទៅជាធាតុយក width តាម ធាតុ អាចកំណត់​ width​​ បន្ថែមបាន បាន </p>
+
+    <h2>Hello</h2>
+    <h2>Hello</h2>
+    <br><br><br>
+
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    
+    <div class="container">
+        <div class="container-card">card1</div>
+        <div class="container-card">card2</div>
+        <div class="container-card">card3</div>
+    </div>
+
+
+</body>
+</html>
