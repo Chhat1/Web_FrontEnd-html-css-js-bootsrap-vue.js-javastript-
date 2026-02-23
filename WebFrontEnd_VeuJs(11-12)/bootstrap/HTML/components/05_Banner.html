@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* Offcanvas sidebar link base style */
+        .offcanvas-body .nav-link {
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+    
+        /* Hover effect */
+        .offcanvas-body .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding-left: 28px;
+        }
+    
+        /* Left border indicator on hover */
+        .offcanvas-body .nav-link::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 0;
+            background-color: #ffc107;
+            /* Bootstrap warning color */
+            border-radius: 2px;
+            transition: height 0.3s ease;
+        }
+    
+        .offcanvas-body .nav-link:hover::before {
+            height: 60%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="container-fluid bg-primary position-sticky top-0 z-3">
+        <nav class="container-fluid navbar navbar-expand-lg py-3">
+            <a class="navbar-brand text-light  fs-2 " href="">LOGO</a>
+    
+            <!-- btn list -->
+            <button data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                class="rounded p-1 border-0 d-lg-none d-flex bg-primary" aria-label="btn"><i
+                    class="bi bi-list fs-2 text-light fw-bolder"></i></button>
+    
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="nav gap-2">
+                    <li><a class="nav-link fs-5 text-light" href="">Home</a></li>
+                    <li><a class="nav-link fs-5 text-light" href="">About</a></li>
+                    <li><a class="nav-link fs-5 text-light" href="">Services</a></li>
+                    <li><a class="nav-link fs-5 text-light" href="">Contact</a></li>
+                    <li><a class="nav-link fs-5 text-light" href="">Map</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="offcanvas offcanvas-start w-75" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="sidebar"
+        aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header border-bottom bg-primary text-light">
+            <img class="w-25 rounded-circle" src="https://i.pinimg.com/736x/1e/36/90/1e3690acfe9e5640ba4faa51376d7510.jpg"
+                alt="">
+            <h1 class="mx-3">Your Name</h1>
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-primary">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-light fs-4">
+                <li class="nav-item m-0">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
+                </li>
+                <li class="nav-item m-0">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-person-circle"></i> Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-person-badge-fill"></i> About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-tools"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-telephone"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-geo-alt"></i> Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-translate"></i> Language</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+            <div class="carousel-item  active">
+                <img src="https://i.pinimg.com/1200x/0b/56/67/0b56673fdb2d41e3d13288c64218ed6e.jpg" class="d-block w-100 h-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://i.pinimg.com/1200x/18/0c/38/180c38cc29df85c23f1701f373648e02.jpg" class="d-block w-100 h-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://i.pinimg.com/1200x/0b/56/67/0b56673fdb2d41e3d13288c64218ed6e.jpg" class="d-block w-100 h-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
