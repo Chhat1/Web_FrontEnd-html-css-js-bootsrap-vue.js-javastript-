@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+
+    <script>
+
+        //Declare array 1D
+        // const arr = [1,2,3,4];
+
+        // console.log("Array of index[0] = " + arr[0]);
+        // console.log("Array of index[1] = " + arr[1]);
+        // console.log("Array of index[2] = " + arr[2]);
+        // console.log("Array of index[3] = " + arr[3]);
+        
+        // const name = ["Anna", "Hon", "Gong", "Dara"];
+        // for(var i = 0; i<name.length;i++){
+        //     console.log("User["+i+"] : " + name[i]);
+        // }
+
+        // console.table(name);
+
+        //Array 2D
+        // const arrTwo = [
+        //     [1,2,3],
+        //     [4,5,6]
+        // ];
+        
+        // console.log(arrTwo[1][1]);
+        // console.table(arrTwo);
+
+        // for(var row = 0; row < 2; row++){
+        //     console.log("=========>ROW["+ row +"]<==========");
+        //     for(var col = 0; col < 3; col++){
+        //         console.log("col["+col+"] : "+arrTwo[row][col]);
+        //     }
+        // }
+        
+        // Accosiate Array (Array key Or Object key)
+        // const obj = {
+        //     id : 1001,
+        //     name : "Product",
+        //     price : 200
+        // }
+
+        // console.log("ID              : " +obj.id);
+        // console.log("Name of Product : " + obj.name);
+        // console.log("Unit Price      : " + obj.price);
+
+
+        // Array object key 
+        const arrObj = [
+            {
+                id: 1001,
+                name : "Anina",
+                gender : "Female",
+                age : 19
+            },
+            {
+                id: 1002,
+                name: "Dara",
+                gender: "Male",
+                age: 20
+            }
+        ]
+
+        console.table(arrObj);
+        console.log(arrObj[0]);
+        console.log(arrObj[1]);
+
+        console.log("-------------Using for loop---------------");
+        for(var i = 0; i< 2;i++){
+            console.log("=====[Product:" +(i+1)+"]=====");
+            console.log(arrObj[i]);
+        }
+        document.write("ID:"+  arrObj[0].id+"<br>");
+        document.write("USERNAME:"+  arrObj[0].name + "<br>");
+        document.write("DENDER:"+  arrObj[0].gender + "<br>");
+        document.write("AGE :"+  arrObj[0].age);
+
+    </script>
+</body>
+</html>

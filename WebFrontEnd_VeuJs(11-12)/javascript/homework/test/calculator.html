@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <input type="search" id="search" placeholder="Search name">
+    <button onclick="searchName()">Search</button>
+    <p id="result"></p>
+
+    <script>
+        let data = ["Chard","Jasmin","Dara","Sokha","Khemra"];
+
+        function searchName(){
+            let value = document.getElementById("search").value;
+
+            if(data.includes(value)){
+                document.getElementById("result").innerHTML = "Search found!";
+            }else{
+                document.getElementById("result").innerHTML = "Search not found!";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

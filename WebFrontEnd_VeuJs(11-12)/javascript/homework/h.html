@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Homwork1</h1>
+    <script>
+        let score1 = parseFloat(prompt("Enter score1 ="));
+        let score2 = parseFloat(prompt("Enter score2 ="));
+        let score3 = parseFloat(prompt("Enter score3 ="));
+        let score4 = parseFloat(prompt("Enter score4 ="));
+        let score5 = parseFloat(prompt("Enter score5 ="));
+
+        let total = score1+score2+score3+score4+score5;
+        let avg = total/5;
+
+        document.write("======= Output score , total, average ========<br>");
+        document.write("score1="+score1+"<br>");
+        document.write("score2="+score2 + "<br>");
+        document.write("score3="+score3 + "<br>");
+        document.write("score4="+score4 + "<br>");
+        document.write("score5="+score5 + "<br>");
+        document.write("Total score="+ total + "<br>");
+        document.write("Average="+ avg + "<br>");
+
+        
+        let code = parseInt(prompt("Enter code of product:"));
+        let name = prompt("Enter name of product:");
+        let qty = parseInt(prompt("Enter qty of product:"));
+        let price = parseFloat(prompt("Enter price of product:"));
+        let Total = parseFloat(price * qty);
+        
+        document.write("=============Homework2 ================<br>");
+        document.write("<table border='1' style='border-collapse: collapse; width: 100%'");
+
+            document.write("<tr style='text-align: center;'>")
+                document.write("<th>Code</th>")
+                document.write("<th>Name</th>")
+                document.write("<th>Qty</th>")
+                document.write("<th>Price</th>")
+                document.write("<th>Total</th>")
+            document.write("</tr>")
+            
+            document.write("<tr style='text-align: center;'>")
+                document.write("<td>"+code+"</td>")
+                document.write("<td>" + name + "</td>")
+                document.write("<td>" + qty + "</td>")
+                document.write("<td>" + price + "</td>")
+                document.write("<td>" + Total + "</td>")
+            document.write("</tr>")
+
+        document.write("</table>")
+    </script>
+</body>
+</html>
