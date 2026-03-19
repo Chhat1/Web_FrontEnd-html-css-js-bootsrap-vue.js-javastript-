@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+</body>
+
+<script>
+
+    // 1./Spred Operator with array :   (...)
+
+    // 1.1./Copy element array
+    let oldArray = [1,2,3,4];
+    let copyArray = [...oldArray];
+    console.table(copyArray);
+    
+    // // 1.2./combine array
+    let beforeArr = [1,2,3];
+    let combineArr = [...beforeArr,4,5]; // output [1,2,3,4,5,6]
+    console.table(combineArr);
+
+    // // 1.3./Marge with array :  mean itemArr1 + itemArr2 = newItemArr
+
+
+    let song1 = ["Baby","Blue","2K25"];
+    let song2 = ["Lonely","Come on","Legain"];
+
+    let allArr = [...song1,...song2];
+    console.table(allArr);
+    
+
+
+    // // using spred operator with object
+    // // Copy key in obj
+    let objOld = {
+        a : 10,
+        b : 20
+    }
+    let objNew = {
+        ...objOld
+    }
+
+    let {a,b} = objOld; // Using destructuring
+
+    console.log(`
+        a = ${a}
+        b = ${b}
+    `);
+
+
+
+    // Marge object
+    let per1 = {
+        id: 1,
+        name: "SOnk"
+    }
+
+    let per2 = {
+        gender: "Male",
+        major: "IT"
+    }
+    let fullPer = {...per1,...per2};
+    
+    let {id,name,gender,major} = fullPer;
+
+    console.log(`ID: ${id} Name: ${name} Gender: ${gender} Major: ${major}`);
+
+
+
+    
+    //Array object
+
+    let Drink = [
+        {id: 1, name: "Idol"},
+        {id: 2, name: "Coca"},
+    ]
+
+    let Mobile = [
+        {id: 1,name: "iphone18"},
+        {id: 2,name: "Sumsung"},
+    ]
+
+    allProduct = [
+        ...Drink,
+        ...Mobile
+    ]
+
+    console.table(allProduct);
+
+    console.log(`Drink ${Drink[1].name}`);
+
+</script>
+
+</html>

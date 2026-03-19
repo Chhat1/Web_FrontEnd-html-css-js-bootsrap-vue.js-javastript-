@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // // for of
+    // // Syntax :  for (variable of array){} ចាប់យកតម្លៃនៃ loop
+    // let arr = [1,2,3,4];
+    // for(let value of arr){
+    //     document.write(`<h1>Element : ${value}`);
+    // }
+    // let arrName = ["Dara","Sokha","Narith"]; // Using for of
+    // for(let name of arrName){
+    //     document.write(`<h1>Element : ${name}`);
+    // }
+
+
+    // // for in loop index of array or key of object ការចាប់យក index and value
+    // let arr2 = [2,3,4,5];
+    // for(let index in arr2){
+    //     document.write(`<h1>Index: ${index} = value ${arr2[index]}`);
+    // }
+    // let arrAge = [19,20,40];
+    // for(let indexAge in arrAge){
+    //     document.write(`<h1>Index[${indexAge}] = value ${arrAge[indexAge]}`);
+    // }
+
+    // document.write(`<hr>`);
+    // // forEach()
+    // // value in function = value of element array
+    // // arrayName.forEach(cllback), allBack = (value,index) => {}
+    // arr2.forEach((value) =>{
+    //     document.write(`<h1> value =  ${arr2[index]}`);
+    // });
+
+
+
+    // forEach() = for of and for in
+    // let arr4 = [5,6,7,8];
+    // arr4.forEach((ele,idx)=>{
+    //     document.write(`<h1>index[${idx}] = ${ele}</h1>`);
+    // });
+
+
+    let num = [1,2,3,4,5];
+    num.forEach((ele,idx) =>{
+        document.write(`<h1>index[${idx}] = ${ele}</h1>`)
+    })
+    const fruits = ["Apple", "Mango", "Banana"];
+    fruits.forEach((fruit,index)=>{
+        document.write(`<h1>Fruit[${index}] = ${fruit}`)
+    })
+</script>
+</html>
