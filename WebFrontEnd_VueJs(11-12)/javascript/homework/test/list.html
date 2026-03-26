@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+<style>
+    header{
+        height: 10vh;
+        background: linear-gradient( #00c6ff , #0072ff);
+        background-repeat: no-repeat;
+        position: sticky;
+        top: 0;
+    }
+    .main-sidebar .sidebar{
+        position: fixed;
+        width: 100%;
+    }
+    .main-sidebar .sidebar .menu-links .link-item{
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .main-sidebar .sidebar .menu-links .link-item:hover{
+        background-color: gainsboro;
+        transform: scale(1.1);
+    }
+</style>
+<body>
+    
+
+    <header>
+        <nav class="d-flex justify-content-between px-5 align-items-center h-100">
+            <div class="logo"><h1 class="text-light">Management System</h1></div>
+            <div class="logout">
+                <button class="btn btn-danger fs-5 fw-medium">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-sidebar">
+        <div class="sidebar w-25 bg-light vh-100 shadow">
+            <ul class="menu-links list-unstyled px-5">
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-clipboard2-data-fill"></i> Dashboard</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-people"></i> Students</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-person-workspace"></i> Teachers</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-book-half"></i> Courses / Subjects</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="ri-school-line"></i> Classes</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-calendar-check"></i> Attendance</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-book"></i> Exams / Grades</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-credit-card"></i> Fees / Payments</a></li>
+                <li class="py-3 fw-medium fs-5 border border-1 my-3 px-3 rounded-4 link-item "><a class="text-decoration-none text-black" href=""><i class="bi bi-gear"></i> Settings</a></li>
+            </ul>
+        </div>
+        
+        
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

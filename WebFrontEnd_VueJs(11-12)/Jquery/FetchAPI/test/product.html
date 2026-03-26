@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="px-0">
+        <nav class="bg-primary py-3 text-light fs-1 text-center">All Products</nav>
+    </header>
+    <div class="d-flex flex-column align-items-center my-5">
+        <div class="position-relative d-flex justify-content-center align-items-center">
+            <div id="loading" class="spinner-border text-primary" style="width: 4rem; height: 4rem; border-width: 0.25rem;"
+                role="status"></div>
+            <div id="animation" class="spinner-grow text-info position-absolute" style="width: 2rem; height: 2rem;"
+                role="status"></div>
+        </div>
+        <span id="status" class="mt-3 fsKh fw-semibold text-primary tracking-wider"
+            style="font-family: khmer os;">កំពុងផ្ទុកទិន្នន័យ...</span>
+    </div>
+
+    <div id="main-card" class="container m-auto gap-5 row justify-content-center py-5">
+
+    </div>
+   
+</body>
+
+<script>
+    $.ajax({
+        url: "https://fakestoreapi.com/products",
+        type: "GET",
+        beforeSent: function(){
+            $("#loading").show();
+        },
+        success: function (response) {
+            console.log("Request data successfully!");
+            console.log(response);
+            $("#loading").hide();
+            $("#status").hide();
+            $("#animation").hide();
+
+            let MainCard = "";
+            response.forEach(data=>{
+                
+                MainCard += `
+                    <div id="cardHover" class="col-12 col-sm-6 col-lg-3">
+                        <div class="card h-100 shadow border-0 rounded-4">
+                            <div class="card-header p-2">
+                                <!-- Image -->
+                                <div class="overflow-hidden rounded-top-4" style="height: 250px;">
+                                    <img src="${data.image}" class="card-img-top h-100 w-100 object-fit-cover" alt="Product">
+                                </div>
+                            </div>
+                            <!--Card Body -->
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="fw-bold mb-1">${data.title}</h6>
+                                <p class="text-muted small mb-2">
+                                        Lorem ipsum dolor sit amet.
+                                </p>
+                                <!-- Price -->
+                                <h5 class="text-danger fw-bold mb-3">$ ${data.price}</h5>
+                                <!-- Button -->
+                                <button class="btn btn-danger fw-medium mt-auto rounded-3">
+                                    <i class="bi fw-medium bi-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            })
+            $("#main-card").html(MainCard);
+        },
+        error: function(){
+
+        },
+        complete: function(){
+            console.log("Request successfully!");
+            $("#loading").hide();
+            $("#status").hide();
+            $("#animation").hide();
+        }
+    });
+</script>
+</html>

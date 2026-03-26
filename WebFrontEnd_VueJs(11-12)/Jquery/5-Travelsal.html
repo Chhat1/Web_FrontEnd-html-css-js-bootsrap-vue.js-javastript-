@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <h1 id="child">Child</h1>
+    </div>
+
+    <div>
+        <div id="one">One</div>
+        <div id="two">Two</div>
+        <div id="three">Three</div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+
+    $(function () {
+
+        //Parent();
+        $("#child").parent().css("background","red");
+
+        //Children
+        $("#parent").children().css("color","white");
+
+        //shiblings()
+
+        $("#two").siblings().css("color",'pink');
+
+        //prev()
+        $("#two").prev().css("background","yellow");
+
+         //next()
+        $("#two").next().css("background", "red");
+    })
+</script>
+
+</html>

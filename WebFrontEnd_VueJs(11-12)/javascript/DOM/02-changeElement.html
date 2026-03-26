@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="txt"></div>
+
+    <div id="menu"></div>
+
+    <img width="300" id="image" src="" alt="">
+
+    <div id="box">Box</div>
+
+</body>
+<script>
+    let txt = document.getElementById("txt");
+    txt.innerHTML = `<h1 style='color: red; background: blue;'>Hello change</h1>
+    <h2>Heading 2</h1>`;
+    console.log(txt);
+
+        let menu = document.getElementById('menu');
+
+        menu.innerHTML =
+         `<ul>
+                <li>Item1</li>
+         </ul>`;
+
+        const img = document.getElementById('image');
+        // img.src="/MenuDesign.jpg";
+        img.setAttribute('src',"/MenuDesign.jpg");
+        img.style.borderRadius = "20px";
+
+
+        // style css in js
+
+        const box = document.getElementById('box');
+        box.style.width = "300px";
+        box.style.height = "300px";
+        box.style.color = "white";
+        box.style.backgroundColor = "red";
+        box.style.borderRadius = "20px";
+        box.style.display = "flex";
+        box.style.justifyContent = "center";
+        box.style.alignItems = "center";
+        box.style.fontSize = "30px";
+        box.style.fontFamily = "khmer os"
+        box.style.fontWeight = "bolder";
+
+</script>
+</html>

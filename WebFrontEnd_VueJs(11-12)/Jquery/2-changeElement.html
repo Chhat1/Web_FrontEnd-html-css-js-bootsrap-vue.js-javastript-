@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+
+</style>
+<body>
+    <h1 id="changeText"></h1>
+    <img src="" alt="" id="img">
+    <input type="text" id="name" value="">
+
+    <p id="txt">Before Change</p>
+    <button id="btn">Change</button>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    $(function () {
+        $("#changeText").text("Changed text");
+        $("#changeText").append(" acive"); // and end element
+        $("#changeText").prepend("Hi "); // add first element
+        // $("#changeText").html(`
+        // <h1>j</h1>
+        // `);
+
+        $("#img").attr("src","https://i.pinimg.com/1200x/b3/88/2e/b3882e255b68715f4655d4681a0bfa29.jpg");
+        $("#img").css("width","250px");
+
+
+        const textInput = $("#name").val("My name");
+        console.log(textInput);
+
+
+        $("#btn").click(function(){
+            $("#txt").text("Changed!");
+            $("#txt").css("color","red");
+        })
+
+        
+    })
+</script>
+</html>

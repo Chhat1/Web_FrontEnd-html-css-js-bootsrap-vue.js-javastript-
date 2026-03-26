@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="width: 150px; transition: transform 0.3s ease-in-out; height: 150px; background-color: red;"></div>
+    <img width="350px" src="https://i.pinimg.com/736x/2d/5a/0b/2d5a0bec33cd43392fb18223d1848d88.jpg" alt="" id="image">
+
+
+    <input type="text" id="keyInput">
+
+    <form  id="form">
+        <input type="text" id="name">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(function(){
+        $("#image").hover(
+            function(){
+                $(this).attr("src","https://i.pinimg.com/736x/68/e6/c9/68e6c902066ea03f966d79f8c7ad329a.jpg");
+            },
+            function(){
+                $(this).attr("src","https://i.pinimg.com/736x/2d/5a/0b/2d5a0bec33cd43392fb18223d1848d88.jpg");
+            }
+        )
+
+        //Hover event
+        $("#box").hover(
+            function(){
+                $(this).css("transform","rotate(360deg)");
+            },
+            function(){
+                $(this).css("transform", "rotate(0deg)");
+            }
+        )
+
+        //Keypress
+        $("#keyInput").keypress(function(e){
+            if(e.key=="Enter"){
+                alert(`Ented`);
+            }
+        })
+
+        //Submit Event
+        $("#form").submit(function(e){
+            e.preventDefault(); // not refresh page
+            let name = $("#name").val();
+            console.log(name);
+            
+        })
+    })
+</script>
+</html>

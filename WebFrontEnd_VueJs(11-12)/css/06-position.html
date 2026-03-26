@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Position Properties</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            font-family: sans-serif;
+            text-shadow: 0 0 5px black;
+            font-size: 50px;
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: saddlebrown;
+            margin: 100px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .parent > .children{
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            
+            /*
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            */
+
+             /*ដាក់ឲ្យចំកណ្ដាល of parent*/
+
+
+            height: 25%;
+            width: 25%;
+            background-color: greenyellow;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        .parent > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="parent">
+        <img src="https://i.pinimg.com/736x/07/fb/34/07fb3452c4640d881a16d08c2e314f3e.jpg" alt="">
+        <div class="children"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        height: 10vh;
+    }
+    .card{
+        width: 350px;
+        height: 550px;
+    }
+    .card .card-header{
+        height: 55%;
+        overflow: hidden;
+    }
+    .card .card-body{
+        height: 45%;
+        overflow: hidden;
+    }
+    .card .card-body .name, .price, .des, .Botton{
+        height: 25%;
+    }
+
+   
+</style>
+<body>
+    <header class="bg-success position-sticky top-0 z-3">
+        <nav class="h-100 d-flex justify-content-center align-items-center">
+            <h1 class="text-white">Product</h1>
+        </nav>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center gap-5 flex-wrap mt-5" id="card">
+            
+        </div>
+    </main>
+</body>
+<script>
+    const card = document.getElementById('card');
+
+    async function product(){
+        const res = await fetch("https://fakestoreapi.com/products");
+        const data = await res.json();
+        console.log(data);
+        data.forEach(item=>{
+            card.innerHTML += `
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <img src="${item.image}" class="card-img-top w-100 object-fit-cover" alt="...">
+                </div>
+                <div class="card-body">
+                    <div class="name">
+                        <h5 class="card-title h-100 fs-6">${item.title}</h5>
+                    </div>
+                    <div class="price">
+                        <p class="card-text fs-5 text-success fw-medium mt-2 h-100">$${item.price}</p>
+                    </div>
+                    <div class="des">
+                        <p class="detail h-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="Button">
+                        <a href="#" class="btn mt-3 h-100 BTN btn-primary fw-medium w-100">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            `;
+        })
+    }
+    product();
+</script>
+</html>

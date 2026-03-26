@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background: rebeccapurple;
+    color: white;
+    font-size: 30px;
+    padding: 120px;
+    /* margin: 100px 200px; 100px for​ លើក្រោម  ; 200px ឆ្វេងស្ដាំ */
+   
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    border: 50px dashed red;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+.card{
+    border: 10px solid green;
+    /* width: 500px; */
+    min-width: 300px;
+    height: 500px;
+    font-family: sans-serif;
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}

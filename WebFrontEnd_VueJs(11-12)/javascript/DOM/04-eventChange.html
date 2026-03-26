@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <select title="select" id="selectChange">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+
+    <input type="text" id="inputKey" placeholder="Enter text" value="">
+
+    <img id="imgChange" width="350" src="/MenuDesign.jpg" alt=""> -->
+
+
+    <form id="handleSubmit">
+        <button  style="width: 200px; height: 50px; background-color: cornflowerblue; font-size: 20px; color: white; border: none;" type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+
+    //Event Change
+    const selectChange = document.getElementById('selectChange');
+    selectChange.addEventListener("change",(e)=>{
+        alert(e.target.value);
+    });
+
+
+    // Event keypress
+    const input = document.getElementById('inputKey');
+    input.addEventListener("keypress",(event)=>{
+        if(event.key == "Enter"){
+            alert("You enter");
+        }
+
+        if(evnet.key === "Tab"){
+            alert("You tap");
+        }
+    })
+    
+    // Event Load
+    // window.addEventListener("load",()=>{
+    //     alert("page is reload.");
+    // })
+
+
+    //Event mouseover
+
+    const imgChange = document.getElementById("imgChange");
+
+    imgChange.addEventListener('mouseover',()=>{
+        imgChange.setAttribute('src',"https://i.pinimg.com/1200x/34/09/e2/3409e2620f9f45c688f9add4feb892ee.jpg");
+    });
+
+    imgChange.addEventListener('mouseleave',()=>{
+        imgChange.setAttribute('src',"/MenuDesign.jpg");
+    });
+
+
+    //Event Submit
+    const handleSubmit = document.getElementById('handleSubmit');
+    handleSubmit.addEventListener("submit",()=>{
+        alert("Input form hav submit data");
+    })
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url("https://i.pinimg.com/736x/5a/fd/b4/5afdb49d18411e9a7a4d971f48946f1f.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form{
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+        
+    </style>
+</head>
+<body>
+    <form class="h-auto p-3 border shadow-lg rounded-3 m-5 mx-auto  text-white" style="width: 35%;">
+        <h3 class="text-center">Wedding RSVP</h3>
+            <input class=" mb-3 form-control" type="text" placeholder="Username">
+            <input class=" mb-3 form-control " type="email" placeholder="Email">
+            <input class=" mb-3 form-control" type="number" placeholder="Number of Guests">
+        <label class="form-label w-100">Will you attend?</label>
+        <input type="radio" title="yes">
+        <label class="form-label" >Yes</label>
+        <input type="radio" title="no">
+        <label class="form-label" >No</label>
+        <label class="form-label w-100">Meal Preference?</label>
+        <select title="option" class="form-select" name="" id="">
+            <option>Select an option</option>
+            <option>English</option>
+        </select>
+        <textarea name="" id="" class="w-100 my-3 form-control" placeholder="Additional Notes"></textarea>
+        <button type="button" class="btn btn-primary w-100">Submit RSVP</button>
+    </form>
+</body>
+</html> 

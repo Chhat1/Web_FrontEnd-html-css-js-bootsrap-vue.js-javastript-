@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - Keyframe</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: content-box;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            animation: boxRun2 3s infinite alternate linear /* alternate:កំណត់ដើរវិលជុំទៅវិញទៅមក/ infinite: សម្រាប់ឲ្យដើរមិនបាត់*/;
+            overflow: hidden;
+        }
+        .box > .image > img{
+            width: 300px;
+            height: 300px;
+        }
+        @keyframes boxRun1 {
+            from{
+                box-shadow: 0 0 50px rgb(230, 0, 168);
+                /*transform: translateX(0);*/
+                transform: rotate(0); /* ដាក់ឲ្យវិលជុំ*/
+            }
+            to{
+                box-shadow: 0 0 50px gold;
+                /*transform: translateY(500px);*/
+               transform: rotate(360deg);
+            }
+        }
+
+        @keyframes boxRun2{
+            0%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(0.5);
+                box-shadow: 0 0 15px red;
+            }
+            100%{
+                transform: scale(1);
+                box-shadow: 0 0 15px black;
+            }
+        }
+
+
+        .banner{
+            width: 80%;
+            height: 50vh;
+            margin: auto;
+            animation: changeImg 10s infinite alternate linear;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+        }
+        @keyframes changeImg{
+            0%{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("https://i.pinimg.com/1200x/80/3c/c2/803cc24726e912cfdcf79e9b80a60ff0.jpg");
+                transform: scale(0.8);
+                background-position: center;
+            }
+            50%{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("https://i.pinimg.com/736x/4d/50/42/4d5042b6cd9a9318cd307f81b30d173f.jpg");
+            }
+            100%{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("https://i.pinimg.com/1200x/80/3c/c2/803cc24726e912cfdcf79e9b80a60ff0.jpg");
+                transform: scale(1);
+                background-position: center;
+            }
+        }
+        img{
+            box-shadow: 0 0 10px black;
+            margin: 20px;
+            /*filter: blur(5px);*/
+            filter: drop-shadow(0 0 10px black);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animation -->
+     <div class="box">
+        <div class="image">
+            <img src="https://i.pinimg.com/1200x/08/33/b3/0833b39944376978099ea1c6e11b8554.jpg" alt="">
+        </div>
+     </div>
+
+
+     <div class="banner">
+        
+     </div>
+
+
+     <img width="300px" src="https://th.bing.com/th/id/R.f4894d088838ff03fb9816c1b3f49262?rik=rJSpwOoNCA41rA&pid=ImgRaw&r=0" alt="">
+</body> 
+</html>

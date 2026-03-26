@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <style>
+        body{
+            display: inline-flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <script>
+        //For loop;
+        // let size = prompt("Enter number of size:");
+        // for(let i=1;i<=size;i++){
+        //     document.write("<div class='box'>"+i+"</div>")
+        // }
+
+        // While loop
+        // let size = prompt("Enter number of size:");
+        // let j=0; //start
+        // while(j<=size){ //stop
+        //     document.write("This while loop"); //output
+        //     j++; //step
+        // }
+
+
+        // Do/While loop
+        do{
+            let ch;
+            ch = prompt("Please choose (y/n/e):");
+
+            switch(ch){
+                case 'y':{
+                    document.write("output Yes");
+                    
+                }
+                case 'n':{
+                    document.write("output No");
+                    break;
+                }
+                case 'e':{
+                    document.write("Exited...");
+                    break;
+                }
+                default: document.write("invalid option!");
+            }
+        }while(ch!="e");
+    </script>
+</body>
+</html>

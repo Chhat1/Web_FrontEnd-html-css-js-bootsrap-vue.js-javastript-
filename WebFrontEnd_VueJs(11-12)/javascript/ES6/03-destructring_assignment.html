@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+</head>
+<body>
+
+    <script>
+
+        //Destructuring with array
+
+        const number = [1,2,3];
+
+        const [a,b,c] = number;
+
+        console.log
+        (`
+            a = ${a}
+            b = ${b}
+            c = ${c}
+        `);
+
+        //Destructuring with object
+
+        let obj = {
+            id : 1,
+            name : "Dara",
+            age : 19
+        }
+
+        let {id,name,age} = obj;
+
+        console.log(`
+            ID : ${id}
+            Name : ${name}
+            Age : ${age}
+        `);
+
+
+        let fruit = [
+            {
+                id : 1,
+                name : "Apple",
+                price : "3.50$/1kg"
+            },
+            {
+                id: 2,
+                name : "Mango",
+                price : "1$/kg"
+            }
+        ];
+
+        console.table(fruit);
+
+        
+
+    </script>
+
+</body>
+</html>

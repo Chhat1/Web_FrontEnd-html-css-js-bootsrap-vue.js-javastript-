@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Insert</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-primary">
+    <div class="container">
+        <!-- form -->
+        <div class="card shadow col-12 col-md-6 col-lg-4 m-auto mt-5">
+            <form id="formData" class="p-4">
+                <h3 class="text-center mb-5">Form Add Students</h3>
+
+                <div class="form-group my-3">
+                    <label class="form-label">Full Name</label>
+                    <input id="name" class="form-control shadow-none" placeholder="Enter full name" type="text">
+                </div>
+                <div class="form-group my-3">
+                    <label class="form-label">Department</label>
+                    <input id="Department" class="form-control shadow-none" placeholder="Enter department" type="text">
+                </div>
+                <div class="form-group my-3">
+                    <label class="form-label">Class</label>
+                    <select class="form-select shadow-none" id="Class">
+                        <option>Choose your class</option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                        <option value="A4">A4</option>
+                    </select>
+                </div>
+                <div class="form-group my-3">
+                    <label class="form-label">Year</label>
+                    <input id="Year" class="form-control shadow-none" placeholder="Enter year" type="number">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-medium">Save</button>
+            </form>
+        </div>
+        <!-- Table -->
+         <table class="table table-bordered table-striped mt-5">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <th>#ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Class</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+                
+            </tbody>
+         </table>
+    </div> 
+</body>
+
+<script>
+    $(function(){
+        let count = 1;
+        $("#formData").submit(function(e){
+            e.preventDefault();
+            let name = $("#name").val();
+            let department = $("#Department").val();
+            let clas = $("#Class").val();
+            let year = $("#Year").val();
+
+            if(name=="" | department=="" | clas=="" | year==""){
+                alert("សូមបំពេញទិន្នន័យឲ្យបានពេញលេញ!");
+            }else{
+                
+                let row = `
+                    <tr class="text-center table-hover">
+                        <td>${count++}</td>
+                        <td>${name}</td>
+                        <td>${department}</td>
+                        <td>${clas}</td>
+                        <td>${year}</td>
+                    </tr>
+                `;
+                $("#tableData").append(row);
+            }
+        })
+    })
+</script>
+
+</html>

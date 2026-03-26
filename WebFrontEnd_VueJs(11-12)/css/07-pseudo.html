@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hover-element{
+            width: 200px;
+            background-color: blue;
+            height: 200px;
+            transition: all .5s ease-in-out;
+        }
+        .hover-element:hover{
+            transition: all .5s ease-in-out;
+            width: 100%;
+            color: pink;
+            height: 200px;
+            background-color: red;
+        }
+        input{
+            background-color: rgb(12, 69, 160);
+            transition: all .5s ease-in-out;
+            padding: 15px;
+        }
+        input:focus{
+            background-color: red;
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+            transition: all .5s ease-in-out;
+        }
+        input::placeholder{ 
+            color: white;
+        }
+        button{
+            transition: all .5s ease-in-out;
+        }
+
+        button:active{
+            background-color: red;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            transition: all .5s ease-in-out;
+        }
+        ul > li{
+            color: orange;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        ul > li:first-child{
+            background-color: red;
+        }
+        ul > li:last-child{
+            background-color: pink;
+            color: black;
+        }
+        ul > li:nth-child(3){
+            background-color: green;
+            
+        }
+        .insert-element{
+            margin-top: 50px;
+            margin-left: 10px;
+            padding: 15px;
+            border-radius: 30px;
+            font-family: sans-serif;
+        }
+
+        .insert-element::before{
+            content: "Inserted";
+            background-color: red;
+            font-family: sans-serif;
+            border-radius: 30px;
+            padding: 15px;
+        }
+        .insert-element::after{
+            content: "After insert";
+            background-color: red;
+            font-family: sans-serif;
+            border-radius: 30px;
+            padding: 15px;
+        }
+
+        p::first-line{
+            color: rgb(194, 9, 135);
+            font-family: sans-serif;
+            text-decoration: underline
+        }
+        p::first-letter{
+            background-color: green;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 100px;
+        }
+        .paragraph::selection{
+            color: rgb(0, 0, 0);
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Pseudo HTML</h1></center>
+    <hr>
+    <h1 class="hover-element">hover-element</h1>
+    <br><br>
+    
+    <input type="text" placeholder="Focus">
+
+    <button>Active Submit</button>
+    
+    <!-- :child -->
+     <!-- $ តំណាងដាក់លេខរៀង -->
+    
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+    <!-- ::Before -->
+    <h1 class="insert-element">::Before</h1>
+
+
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit sint vero tempora. Eum incidunt iste a at. Dignissimos consequatur voluptate minima, praesentium tempore asperiores ducimus sint aspernatur delectus labore!
+    </p>
+
+    
+
+</body>
+</html>

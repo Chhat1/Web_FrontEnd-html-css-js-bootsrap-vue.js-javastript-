@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    <script>
+        //Array method
+        
+        // const name = ["Jamsok","Donaldrum","ORA"];
+        // name.push("DASA"); //insert new elment end
+        // name.shift(); // remove element first
+        // name.pop("DASA"); // remove element end
+        // name.unshift("Add first element of array")
+        // console.table(name);
+
+        let arr1 = [1,2,3,4];
+        let arr2 = [5,6,7,8];
+
+        // concat() = array1+array2 = all Array
+        let allArray = arr1.concat(arr2);
+        // output allArray = [1,2,3,4,5,6,7,8];
+
+        console.table(allArray);
+
+        // splice() mean delete element of array
+        allArray.splice(0,4); // 0 is startIndex and 2 is number of element for delete
+        console.table(allArray);
+
+
+
+        const product = [
+            {
+                id:1,
+                name: "dara",
+                age: 19
+            
+            },
+            {
+                id: 2,
+                name: "da",
+                age: 19
+            }
+        ];
+        console.table(product);
+    </script>
+</body>
+</html>

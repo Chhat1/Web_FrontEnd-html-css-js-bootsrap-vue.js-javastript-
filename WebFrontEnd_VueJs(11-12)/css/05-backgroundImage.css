@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.mockofun.com/wp-content/uploads/2024/10/Discord-Banner-GIF.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

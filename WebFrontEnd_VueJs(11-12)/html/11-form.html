@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <hr>
+    <center><h1>Form HTML</h1></center>
+    <hr color="black">
+    <form>
+       <fieldset>
+        <div>
+            <label for="name">Input Name:</label><br>
+            <input type="text" id="name" placeholder="Enter name">
+        </div><br>
+        <div>
+            <label for="email">Input Email:</label>
+            <input type="email" id="email" placeholder="Enter email">
+        </div><br>
+        <div>
+            <label for="password">Input Password</label>
+            <input type="password" id="Enter password" placeholder="Enter password">
+        </div><br>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+        <br>
+        <div>
+            <label for="number">Number:</label><br>
+            <input type="number" name="number" id="number"><br>
+            <input type="date" name="date" id="date" placeholder="enter date"><br>
+            <input type="tel" name="tel" id="tel" placeholder="Enter telephone"><br><br>
+            <input type="file" name="file" id="file" placeholder="file"><br><br>
+            <input type="time" name="time" id="time" placeholder="time">
+        </div>
+       </fieldset>
+    </form><br><br><br><br>
+
+    <fieldset  style="border-radius: 50%; background: red; box-shadow: 0 4px 8px 20px rgba(0,0,0,0.1)">
+        <legend  align="center">All input of html</legend>
+        <hr>
+        <h1 align="center">Select box drop down</h1>
+        <hr>
+        <form>
+            <select  title="select">
+                <option value="male">Male</option>
+                <option value="female">female</option>
+                <option value="female">female</option>
+                <option value="female">female</option>
+                <option value="female">female</option>
+                <option value="female">female</option>
+            </select>
+        </form>
+        
+    
+        <form>
+            <textarea cols="50" rows="15" name="message" id="message" placeholder="Enter content"></textarea><br><br>
+            <input type="datetime-local" name="datetime" id="datetime" placeholder="datetime"><br><br>
+            
+        </form>
+        <label for="checkboc">Male</label>
+        <input type="checkbox" name="checkbox" id="checkbox" placeholder="checkbox">
+        <label for="checkbox">Female</label>
+        <input type="checkbox" name="checkbox" id="checkboxs" placeholder="checkbox">
+        <br>
+        <input type="range" name="range" id="range" placeholder="range"><br>
+        <p>1.what is computer?</p>
+        <label 
+        for="radio">A.Mobile</label>
+        <input type="radio" name="radio" id="radio" placeholder="radio"><br><label for="radio">B.Computer</label>
+        <input type="radio" name="radio" id="radio2" placeholder="radio"><br>
+    
+        <input type="button" value="button"><br>
+        <input type="reset" value="reset"><br>
+        <input type="submit" value="submit"><br>
+    </fieldset>
+</body>
+</html>

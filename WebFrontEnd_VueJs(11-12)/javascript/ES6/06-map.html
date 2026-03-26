@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // document.write(`<hr>`);
+    // document.write(`<h1>-map();`);
+    // // map()
+    // const num = [10,20,30,40];
+    // const total = num.map((num)=>num*2);
+    // total.forEach(value=>document.write(`<h1>element ${value}</h1>`));
+    // document.write(`<hr>`);
+    
+    // // map() with array objec
+
+    // const users = [
+    //     {id:1, name: "a", age: 19},
+    //     {id:2, name: "b", age: 20},
+    //     {id:3, name: "c", age: 18},
+    // ];
+
+    // const name = users.map((users)=> users.name);
+    // console.table(name);
+    
+
+    // //Fillter
+    // const searchName = prompt("Enter name");
+    // const result = users.filter((users)=>users.name == searchName);
+    // console.log(result);
+
+    // document.write(`Result: ${result}`);
+
+    
+
+    // map with array
+    // const numberBefor = [1,2,3,4];
+    // const numberAfter = numberBefor.map(num=>{
+    //     return num*2;
+    // })
+
+    // document.write(`
+    // <h1>Befor Number : ${numberBefor},
+    // <h1>After Number : ${numberAfter}</h1>
+    // `);
+
+
+    //map with object
+    // const users = [
+    //     {id: 1, name: "sokha", age: 29},
+    //     {id: 2, name: "Dara" , age: 39},
+    // ]
+    
+    // const userName = users.map(user => {
+    //     return `<h1>id: ${user.id}, name: ${user.name}, age: ${user.age}</h1>`;
+    // });
+    // document.write(userName)
+    // console.table(userName)
+
+
+    // filter(); with object
+    // const users = [
+    //     {id: 1, name: "AB", age: 29},
+    //     {id: 2, name: "BC", age: 19},
+    //     {id: 3, name: "CD", age: 39}
+    // ]
+    // const adultUsers = users.filter(user => user.age > 25);
+    // console.log(adultUsers);
+    
+
+    //filter() with array
+    // const numbers = [1,2,3,4,5,6,7,8];
+    // const evenNumbers = numbers.filter(num => num % 2 === 0);
+    // console.log(evenNumbers)
+
+    
+    const users = [
+        {id: 1, name: "Chhat", age: 19},
+        {id: 2, name: "Sok", age: 23}
+    ]
+
+    const searchName = prompt("Enter name");
+
+    const searchResult = users.filter(user => {
+        return user.name.includes(searchName);
+    })
+    console.log(searchResult)
+    
+    if(searchResult.length > 0){
+        searchResult.forEach(user => {
+            document.write(`Found : ${user.name}`);
+        })
+    }else{
+        document.write("Not found.")
+    }
+</script>
+
+</html>

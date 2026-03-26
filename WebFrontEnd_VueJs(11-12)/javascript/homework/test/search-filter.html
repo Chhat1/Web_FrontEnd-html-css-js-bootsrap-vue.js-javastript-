@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Filter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+        aria-controls="offcanvasTop">search</button>
+    
+    <div class="offcanvas px-5 offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class=" d-flex">
+            <input class="px-5 form-control border-bottom border-0 w-100 shadow-none" type="search" placeholder="Search products...">
+            <button id="search" class="btn btn-primary">Search</button>
+        </div>
+        <h4 class="my-5" id="result"></h4>
+    </div>
+
+    <script>
+        let btnSearch = document.getElementById("search");
+        let result  = document.getElementById("result");
+        const product= [
+            {id: 1, name: "Shirt"},
+            {id: 2, name: "Apple"},
+            {id: 3, name: "Car"},
+            {id: 4, name: "Iphone"}
+        ]
+        btnSearch.addEventListener("click", ()=>{
+            let searchResult = product.filter(product =>{
+                return product.name.includes(btn)
+            })
+        })
+    </script>
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

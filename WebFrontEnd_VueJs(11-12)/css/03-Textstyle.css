@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Moulpali&display=swap');
+.text{
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    font-weight: 700;
+    text-decoration: overline underline dotted;
+
+    
+
+}
+.font{
+    text-align: center;
+    font-family: "Moulpali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.letter-height{
+    line-height: 20px;
+}

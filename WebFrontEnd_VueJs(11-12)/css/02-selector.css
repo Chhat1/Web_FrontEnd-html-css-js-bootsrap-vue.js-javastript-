@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: khmer os;
+    color: rgb(0, 0, 0);
+    background: pink;
+}
+
+#title3{
+    background-color: red;
+    width: 50%;
+}
+#title2{
+    background-color: rgb(8, 20, 244);
+    width: 50%;
+}
+#title1{
+    background-color: rgb(104, 222, 8);
+    width: 50%;
+}
+form{
+    margin-top: 20px;
+}
+option{
+    background: pink;
+}
+select{
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    outline: none;
+    background: white;
+    box-shadow: 0 4px 8px 10px rgb(0, 0, 0, 0.1);
+}
+
+.parent1 > .children{
+    background-color: yellowgreen;
+    color: white;
+}
+
+.parent1 > .parent2 > .children{
+    background-color: saddlebrown;
+    color: white;
+}
+
